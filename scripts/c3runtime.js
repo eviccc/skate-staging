@@ -1385,6 +1385,7 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => 5,
+		() => 1,
 		() => "CONTROLLER TOUCH2",
 		() => 0,
 		() => "skateboard-run",
@@ -1421,8 +1422,14 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
-		() => 1,
-		() => "http://games.yangpentingheppiii.com/leaderboard",
+		() => 7,
+		() => "Congrats, you got a 76 LIGHTER MERCH!",
+		() => 8,
+		() => 10,
+		() => "Congrats, you got a 76 CAP MERCH!",
+		() => 11,
+		() => "Congrats, you got a 76 TSHIRT MERCH!",
+		() => "parent.location.reload();",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
@@ -1447,9 +1454,7 @@ self.C3_ExpressionFuncs = [
 			return () => (10 - v0.GetValue());
 		},
 		() => 0.5,
-		() => 7,
-		() => 6,
-		() => 10
+		() => 6
 ];
 
 

@@ -3,7 +3,7 @@
 
 const scriptsInEvents = {
 
-	async GlobalEs_Event18_Act1(runtime, localVars)
+	async GlobalEs_Event22_Act1(runtime, localVars)
 	{
 		window.parent.postMessage({
 		        type: 'SUBMIT_SCORE',
@@ -13,7 +13,7 @@ const scriptsInEvents = {
 		console.log(runtime.globalVars.points)
 	},
 
-	async GlobalEs_Event21_Act4(runtime, localVars)
+	async GlobalEs_Event25_Act4(runtime, localVars)
 	{
 		const urlParams = new URLSearchParams(window.location.search);
 		const selectedHead = urlParams.get('head');
@@ -39,6 +39,16 @@ const scriptsInEvents = {
 	async LoadingEs_Event1_Act6(runtime, localVars)
 	{
 		localStorage.setItem("gameToken", runtime.globalVars.Token);
+	},
+
+	async Lv15Es15_Event3_Act1(runtime, localVars)
+	{
+		window.parent.postMessage({
+		        type: 'SUBMIT_SCORE',
+		        score: runtime.globalVars.points
+		    }, '*');
+		
+		console.log(runtime.globalVars.points)
 	}
 
 };
