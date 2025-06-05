@@ -14,6 +14,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.AJAX,
 		C3.Plugins.Browser,
 		C3.Plugins.Audio,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Sprite.Cnds.IsVisible,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Acts.GoToLayout,
@@ -21,12 +23,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.Sprite.Cnds.IsVisible,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
 		C3.Plugins.Audio.Acts.SetPaused,
 		C3.Plugins.Touch.Cnds.OnTouchEnd,
 		C3.Behaviors.Platform.Cnds.OnJump,
 		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.System.Acts.SetLayerVisible,
@@ -47,16 +49,19 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.System.Cnds.LayerVisible,
-		C3.Plugins.Browser.Acts.ExecJs,
-		C3.ScriptsInEvents.GlobalEs_Event22_Act1,
+		C3.Plugins.Browser.Acts.GoToURL,
+		C3.JavaScriptInEvents.GlobalEs_Event27_Act1,
 		C3.Plugins.System.Exps.dt,
 		C3.Plugins.System.Exps.zeropad,
 		C3.Plugins.System.Exps.int,
-		C3.ScriptsInEvents.GlobalEs_Event25_Act4,
+		C3.JavaScriptInEvents.GlobalEs_Event30_Act4,
 		C3.Plugins.Text.Acts.SetVisible,
-		C3.ScriptsInEvents.LoadingEs_Event1_Act6,
-		C3.ScriptsInEvents.Lv15Es15_Event3_Act1
+		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.Keyboard.Cnds.OnAnyKey,
+		C3.Plugins.System.Cnds.CompareBoolVar,
+		C3.JavaScriptInEvents.Lv15Es15_Event3_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -131,6 +136,7 @@ self.C3_JsPropNameTable = [
 	{Shoes: 0},
 	{Text: 0},
 	{merchText: 0},
+	{Keyboard: 0},
 	{Obstacle: 0},
 	{PlayerFam: 0},
 	{mobil: 0},
@@ -149,7 +155,8 @@ self.C3_JsPropNameTable = [
 	{countdown: 0},
 	{IsTokenValid: 0},
 	{TokenPayload: 0},
-	{Token: 0}
+	{Token: 0},
+	{isCountdownStarted: 0}
 ];
 
 self.InstanceType = {
@@ -219,6 +226,7 @@ self.InstanceType = {
 	Shoes: class extends self.ISpriteInstance {},
 	Text: class extends self.ITextInstance {},
 	merchText: class extends self.ITextInstance {},
+	Keyboard: class extends self.IInstance {},
 	Obstacle: class extends self.ISpriteInstance {},
 	PlayerFam: class extends self.ISpriteInstance {},
 	mobil: class extends self.ISpriteInstance {}
