@@ -2,17 +2,17 @@
 
 const scriptsInEvents = {
 
-	async GlobalEs_Event14_Act9(runtime, localVars)
+	async GlobalEs_Event16_Act9(runtime, localVars)
 	{
 
 	},
 
-	async GlobalEs_Event20_Act1(runtime, localVars)
+	async GlobalEs_Event22_Act1(runtime, localVars)
 	{
 
 	},
 
-	async GlobalEs_Event27_Act1(runtime, localVars)
+	async GlobalEs_Event30_Act1(runtime, localVars)
 	{
 		window.parent.postMessage({
 		        type: 'SUBMIT_SCORE',
@@ -22,7 +22,7 @@ const scriptsInEvents = {
 		console.log(runtime.globalVars.points)
 	},
 
-	async GlobalEs_Event30_Act4(runtime, localVars)
+	async GlobalEs_Event33_Act4(runtime, localVars)
 	{
 		const urlParams = new URLSearchParams(window.location.search);
 		const selectedHead = urlParams.get('head');

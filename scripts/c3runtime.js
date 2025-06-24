@@ -1286,6 +1286,7 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => "CONTROLLER KEYBOARD",
 		() => "UIGAMEOVER",
+		() => "UIFINISH",
 		() => -10,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
